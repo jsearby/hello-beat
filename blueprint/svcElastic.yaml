@@ -1,0 +1,12 @@
+# Initial service
+apiVersion: v1
+kind: Service
+metadata:
+  # Name of the service
+  name: elastic
+  labels:
+    # Important, associate here the service to the pod app name !
+    name: elastic
+spec:
+  ports:
+    - port: 9200
