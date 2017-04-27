@@ -1,0 +1,12 @@
+# Initial endpoint
+apiVersion: v1
+kind: Endpoints
+metadata:
+  # MUST be the same as the service name, or this won't work!
+  name: logstash 
+  namespace: default
+subsets:
+  - addresses:
+      - ip: 192.168.1.17
+    ports:
+      - port: 5044
